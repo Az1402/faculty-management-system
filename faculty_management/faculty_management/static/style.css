@@ -1,0 +1,47 @@
+/* Additional custom styles */
+
+/* Adjust grid spacing for better responsiveness */
+.grid-cols-3 {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+/* Style the section headings */
+h2 {
+    border-bottom: 2px solid #e5e7eb; /* Light gray border */
+    padding-bottom: 0.5rem; /* Space below the heading */
+    margin-bottom: 1rem; /* Space above the heading */
+}
+
+/* Style for the dean and department cards */
+.bg-white {
+    background-color: #ffffff;
+}
+
+.border {
+    border-color: #e5e7eb; /* Light gray border color */
+}
+
+/* Add a subtle shadow */
+.shadow {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Style for the announcements section */
+.announcement {
+    border-left: 4px solid #3b82f6; /* Blue border on the left */
+    padding-left: 1rem; /* Space between border and text */
+    margin-bottom: 1rem; /* Space below each announcement */
+}
+
+/* Make list items inside announcements more distinct */
+.announcement ul {
+    list-style-type: disc; /* Bulleted list */
+    margin-left: 1.5rem; /* Indentation for list items */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .grid-cols-3 {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Smaller columns on small screens */
+    }
+}
