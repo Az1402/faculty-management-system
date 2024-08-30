@@ -85,10 +85,10 @@ WSGI_APPLICATION = 'faculty_management.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'faculty_db',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'Pass@123',
         'HOST': 'localhost',
         'PORT': '3306',
     }
