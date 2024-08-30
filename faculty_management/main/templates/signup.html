@@ -6,12 +6,17 @@
     <title>Signup</title>
 </head>
 <body>
-    <h1>Signup</h1>
-    <form method="post" action="{% url 'signup' %}">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Signup</button>
-    </form>
+<h1>Signup</h1>
+{% if not user.is_authenticated %}
+<form method="post" action="{% url 'signup' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Signup</button>
+</form>
+{% else %}
+<p>You are already signed up and logged in!</p>
+<a href="{% url 'home' %}">Logout</a>
+{% endif %}
 </body>
 </html>
 

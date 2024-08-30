@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,23 +31,23 @@
             </div>
         </section>
 
-        <section class="my-8">
-            <h2 class="text-2xl font-bold mb-4">Departments</h2>
-            <div class="grid grid-cols-3 gap-4">
-                {% for department in departments %}
-                    <div class="bg-white p-4 border rounded shadow">
-                        <h3 class="text-xl">{{ department.name }}</h3>
-                        <p>HOD: {{ department.hod.username }}</p>
-                        <p>Teachers:</p>
-                        <ul>
-                            {% for teacher in department.teachers.all %}
-                                <li>{{ teacher.username }}</li>
-                            {% endfor %}
-                        </ul>
-                    </div>
+<section class="my-8">
+    <h2 class="text-2xl font-bold mb-4">Departments</h2>
+    <div class="grid grid-cols-3 gap-4">
+        {% for department in departments %}
+        <div class="bg-white p-4 border rounded shadow">
+            <h3 class="text-xl">{{ department.name }}</h3>
+            <p>HOD: {{ department.hod.username }}</p>
+            <p>Teachers:</p>
+            <ul>
+                {% for teacher in department.teachers.all %}
+                <li>{{ teacher.username }}</li>
                 {% endfor %}
-            </div>
-        </section>
+            </ul>
+        </div>
+        {% endfor %}
+    </div>
+</section>
 
         <section class="my-8">
             <h2 class="text-2xl font-bold mb-4">Announcements</h2>
@@ -66,4 +64,3 @@
     </main>
 </body>
 </html>
-
